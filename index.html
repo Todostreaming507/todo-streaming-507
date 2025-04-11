@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo Streaming VIP507</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <header class="bg-gradient-to-r from-purple-700 to-indigo-900 p-6 shadow-lg">
+    <h1 class="text-3xl font-bold text-center">Todo Streaming VIP507</h1>
+    <p class="text-center mt-2 text-lg">Tu acceso premium a las mejores plataformas</p>
+  </header>
+
+  <main class="p-6 max-w-4xl mx-auto">
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold mb-4">Cuentas Disponibles</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md">
+          <h3 class="text-xl font-bold">Netflix con bot</h3>
+          <p class="mt-2">Planes desde $5.00</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md">
+          <h3 class="text-xl font-bold">Disney+</h3>
+          <p class="mt-2">Planes desde $4.00</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md">
+          <h3 class="text-xl font-bold">HBO Max</h3>
+          <p class="mt-2">Planes desde $4.50</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold mb-4">¿Cómo comprar?</h2>
+      <p>Contáctanos por WhatsApp o Instagram para hacer tu pedido.</p>
+      <p class="mt-2">Aceptamos pagos por <strong>Yappi</strong>.</p>
+      <div class="mt-4">
+        <p class="mb-2">Número Yappi: <span id="yappiNumber" class="font-mono">+507 60634927 </span></p>
+        <button onclick="copiarYappi()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
+          Copiar número
+        </button>
+        <p id="copiado" class="text-green-400 mt-2 hidden">¡Número copiado!</p>
+      </div>
+    </section>
+
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold mb-4">Contacto</h2>
+      <ul class="space-y-2">
+        <li>📱 WhatsApp: <a href="https://wa.me/50767582821" class="text-blue-400 underline">+507 6758-2821</a></li>
+        <li>📸 Instagram: <a href="https://instagram.com/todostreamingvip507" class="text-blue-400 underline">@todostreamingvip507</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-center py-4">
+    <p>&copy; 2025 Todo Streaming VIP507. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function copiarYappi() {
+      const numero = document.getElementById('yappiNumber').textContent;
+      navigator.clipboard.writeText(numero).then(() => {
+        document.getElementById('copiado').classList.remove('hidden');
+        setTimeout(() => {
+          document.getElementById('copiado').classList.add('hidden');
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
